@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "module":
+      "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    // "allowJs": true,
+    "outDir": "./dist",
+    // "outFile": "./lib/index.js",
+    "lib": ["es5", "es6", "dom", "es2016"],
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "rootDir": "./src",
+    "sourceRoot": "./src",
+    "sourceMap": true
+  }
+}
