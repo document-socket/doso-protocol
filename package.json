@@ -4,22 +4,26 @@
   "description": "Document Socket - Protocol",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "build": "tsc",
-    "prepublish1": "npm run build",
-    "testa": "mocha --reporter spec"
+    "build:watch": "tsc -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoil/doso-protocol.git"
+    "url": "git+https://github.com/document-socket/doso-protocol.git"
   },
   "keywords": [],
   "author": "Zoltan Jano <zoltan.jano@gmail.com> (https://github.com/zoil)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zoil/doso-protocol/issues"
+    "url": "https://github.com/document-socket/doso-protocol/issues"
   },
-  "homepage": "https://github.com/zoil/doso-protocol#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/document-socket/doso-protocol#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.1.2"
+  }
 }

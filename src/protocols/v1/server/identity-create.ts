@@ -1,4 +1,4 @@
-import * as Server from "./";
+import * as Server from ".";
 import { Message } from "../../../types/protocol";
 
 // ConnectResponse
@@ -8,4 +8,5 @@ export type Payload = {
   secret: string;
 };
 
-export interface Response extends Message<Server.Tokens.SessionNew, Payload> {}
+export interface Response
+  extends Message<Server.Tokens.IdentityCreate, Payload> {}

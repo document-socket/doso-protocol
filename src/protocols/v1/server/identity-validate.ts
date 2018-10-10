@@ -1,4 +1,4 @@
-import * as Server from "./";
+import * as Server from ".";
 import { Message } from "../../../types/protocol";
 
 export type Payload = {
@@ -6,4 +6,4 @@ export type Payload = {
 };
 
 export interface Response
-  extends Message<Server.Tokens.SessionReuse, Payload> {}
+  extends Message<Server.Tokens.IdentityValidate, Payload> {}

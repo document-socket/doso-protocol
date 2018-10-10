@@ -1,29 +1,29 @@
 import { Message } from "../../..";
-import * as SessionNew from "./session-new";
-import * as SessionReuse from "./session-reuse";
-import * as Watch from "./watch";
-import * as Unwatch from "./unwatch";
+import * as IdentityCreate from "./identity-create";
+import * as IdentityValidate from "./identity-validate";
+import * as Subscribe from "./subscribe";
+import * as Unsubscribe from "./unsubscribe";
 import * as Exec from "./exec";
 
 export enum Tokens {
-  SessionNew = "sessN",
-  SessionReuse = "sessR",
-  Exec = "exec",
-  Watch = "watch",
-  Unwatch = "unwatch"
+  IdentityCreate = "idc",
+  IdentityValidate = "idv",
+  Exec = "exe",
+  Subscribe = "sub",
+  Unsubscribe = "uns"
 }
 
-export import SessionNewRequest = SessionNew.Request;
-export import SessionNewRequestPayload = SessionNew.RequestPayload;
+export import IdentityCreateRequest = IdentityCreate.Request;
+export import IdentityCreateRequestPayload = IdentityCreate.RequestPayload;
 
-export import SessionReuseRequest = SessionReuse.Request;
-export import SessionReuseRequestPayload = SessionReuse.RequestPayload;
+export import IdentityValidateRequest = IdentityValidate.Request;
+export import IdentityValidateRequestPayload = IdentityValidate.RequestPayload;
 
-export import WatchRequest = Watch.Request;
-export import WatchRequestPayload = Watch.RequestPayload;
+export import SubscribeRequest = Subscribe.Request;
+export import SubscribeRequestPayload = Subscribe.RequestPayload;
 
-export import UnwatchRequest = Unwatch.Request;
-export import UnwatchRequestPayload = Unwatch.RequestPayload;
+export import UnsubscribeRequest = Unsubscribe.Request;
+export import UnsubscribeRequestPayload = Unsubscribe.RequestPayload;
 
 export import ExecRequest = Exec.Request;
 export import ExecRequestPayload = Exec.RequestPayload;
@@ -33,24 +33,24 @@ export import ExecRequestPayload = Exec.RequestPayload;
  */
 
 export function messageFactory(
-  type: Tokens.SessionNew,
-  payload: SessionNewRequestPayload
-): SessionNewRequest;
+  type: Tokens.IdentityCreate,
+  payload: IdentityCreateRequestPayload
+): IdentityCreateRequest;
 
 export function messageFactory(
-  type: Tokens.SessionReuse,
-  payload: SessionReuseRequestPayload
-): SessionReuseRequest;
+  type: Tokens.IdentityValidate,
+  payload: IdentityValidateRequestPayload
+): IdentityValidateRequest;
 
 export function messageFactory(
-  type: Tokens.Watch,
-  payload: WatchRequestPayload
-): WatchRequest;
+  type: Tokens.Subscribe,
+  payload: SubscribeRequestPayload
+): SubscribeRequest;
 
 export function messageFactory(
-  type: Tokens.Unwatch,
-  payload: UnwatchRequestPayload
-): UnwatchRequest;
+  type: Tokens.Unsubscribe,
+  payload: UnsubscribeRequestPayload
+): UnsubscribeRequest;
 
 export function messageFactory(
   type: Tokens.Exec,

@@ -1,44 +1,44 @@
 import { Message } from "../../../types/protocol";
 import * as Error from "./error";
-import * as SessionNew from "./session-new";
-import * as SessionReuse from "./session-reuse";
-import * as Watch from "./watch";
-import * as WatchData from "./watch-data";
-import * as WatchChanges from "./watch-changes";
-import * as Unwatch from "./unwatch";
+import * as IdentityCreate from "./identity-create";
+import * as IdentityValidate from "./identity-validate";
+import * as Subscribe from "./subscribe";
+import * as SubscriptionData from "./subscription-data";
+import * as SubscriptionChanges from "./subscription-changes";
+import * as Unsubscribe from "./unsubscribe";
 import * as Exec from "./exec";
 
 export enum Tokens {
   Error = "error",
-  SessionNew = "sessN",
-  SessionReuse = "sessR",
-  Exec = "exec",
-  Watch = "watch",
-  Unwatch = "unwatch",
-  WatchData = "data",
-  WatchChanges = "changes"
+  IdentityCreate = "idc",
+  IdentityValidate = "idv",
+  Exec = "exe",
+  Subscribe = "sub",
+  Unsubscribe = "uns",
+  SubscriptionData = "sud",
+  SubscriptionChanges = "suc"
 }
 
 export import ErrorResponse = Error.Response;
 export import ErrorPayload = Error.Payload;
 
-export import SessionNewResponse = SessionNew.Response;
-export import SessionNewPayload = SessionNew.Payload;
+export import IdentityCreateResponse = IdentityCreate.Response;
+export import IdentityCreatePayload = IdentityCreate.Payload;
 
-export import SessionReuseResponse = SessionReuse.Response;
-export import SessionReusePayload = SessionReuse.Payload;
+export import IdentityValidateResponse = IdentityValidate.Response;
+export import IdentityValidatePayload = IdentityValidate.Payload;
 
-export import WatchResponse = Watch.Response;
-export import WatchPayload = Watch.Payload;
+export import SubscribeResponse = Subscribe.Response;
+export import SubscribePayload = Subscribe.Payload;
 
-export import WatchDataEvent = WatchData.Event;
-export import WatchDataPayload = WatchData.Payload;
+export import SubscriptionDataEvent = SubscriptionData.Event;
+export import SubscriptionDataPayload = SubscriptionData.Payload;
 
-export import WatchChangesEvent = WatchChanges.Event;
-export import WatchChangesPayload = WatchChanges.Payload;
+export import SubscriptionChangesEvent = SubscriptionChanges.Event;
+export import SubscriptionChangesPayload = SubscriptionChanges.Payload;
 
-export import UnwatchResponse = Unwatch.Response;
-export import UnwatchPayload = Unwatch.Payload;
+export import UnsubscribeResponse = Unsubscribe.Response;
+export import UnsubscribePayload = Unsubscribe.Payload;
 
 export import ExecResponse = Exec.Response;
 export import ExecPayload = Exec.Payload;
@@ -49,35 +49,35 @@ export function messageFactory(
   requestId: number
 ): ErrorResponse;
 export function messageFactory(
-  type: Tokens.SessionNew,
-  payload: SessionNewPayload,
+  type: Tokens.IdentityCreate,
+  payload: IdentityCreatePayload,
   requestId?: number
-): SessionNewResponse;
+): IdentityCreateResponse;
 export function messageFactory(
-  type: Tokens.SessionReuse,
-  payload: SessionReusePayload,
+  type: Tokens.IdentityValidate,
+  payload: IdentityValidatePayload,
   requestId?: number
-): SessionReuseResponse;
+): IdentityValidateResponse;
 export function messageFactory(
-  type: Tokens.Watch,
-  payload: WatchPayload,
+  type: Tokens.Subscribe,
+  payload: SubscribePayload,
   requestId: number
-): WatchResponse;
+): SubscribeResponse;
 export function messageFactory(
-  type: Tokens.WatchData,
-  payload: WatchDataPayload,
+  type: Tokens.SubscriptionData,
+  payload: SubscriptionDataPayload,
   requestId?: number
-): WatchDataEvent;
+): SubscriptionDataEvent;
 export function messageFactory(
-  type: Tokens.WatchChanges,
-  payload: WatchChangesPayload,
+  type: Tokens.SubscriptionChanges,
+  payload: SubscriptionChangesPayload,
   requestId: number
-): WatchChangesEvent;
+): SubscriptionChangesEvent;
 export function messageFactory(
-  type: Tokens.Unwatch,
-  payload: UnwatchPayload,
+  type: Tokens.Unsubscribe,
+  payload: UnsubscribePayload,
   requestId: number
-): UnwatchResponse;
+): UnsubscribeResponse;
 export function messageFactory(
   type: Tokens.Exec,
   payload: ExecPayload,

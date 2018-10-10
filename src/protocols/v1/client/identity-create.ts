@@ -4,4 +4,4 @@ import { Message } from "../../../types/protocol";
 export type RequestPayload = {};
 
 export interface Request
-  extends Message<Client.Tokens.SessionNew, RequestPayload> {}
+  extends Message<Client.Tokens.IdentityCreate, RequestPayload> {}

@@ -1,4 +1,4 @@
-import * as Server from "./";
+import * as Server from ".";
 import { Message } from "../../../types/protocol";
 
 export interface Payload {
@@ -8,4 +8,5 @@ export interface Payload {
   stream: string;
 }
 
-export interface Event extends Message<Server.Tokens.WatchData, Payload> {}
+export interface Event
+  extends Message<Server.Tokens.SubscriptionData, Payload> {}

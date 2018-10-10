@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "module":
-      "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
