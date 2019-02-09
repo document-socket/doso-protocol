@@ -1,20 +1,15 @@
-import * as HandshakeClient from "./handshake/client";
-import * as HandshakeServer from "./handshake/server";
-
-import * as V1Client from "./v1/client";
-import * as V1Server from "./v1/server";
+import * as BaseClient from "./base/client";
+import * as BaseServer from "./base/server";
+import * as V1_0_0_Client from "./v1.0.0/client";
+import * as V1_0_0_Server from "./v1.0.0/server";
 
 export namespace Protocols {
-  export namespace Handshake {
-    export const ID = "H";
-
-    export import Client = HandshakeClient;
-    export import Server = HandshakeServer;
+  export namespace Base {
+    export import Client = BaseClient;
+    export import Server = BaseServer;
   }
-  export namespace V1 {
-    export const ID = "V1";
-
-    export import Client = V1Client;
-    export import Server = V1Server;
+  export namespace V1_0_0 {
+    export import Client = V1_0_0_Client;
+    export import Server = V1_0_0_Server;
   }
 }

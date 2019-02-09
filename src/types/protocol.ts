@@ -8,7 +8,6 @@ export enum ConnectionState {
   Connecting = "Connecting",
   Reconnecting = "Reconnecting",
   HandshakePending = "HandshakePending",
-  ProtocolSet = "ProtocolSet",
   Ready = "Ready",
   Disconnected = "Disconnected"
 }
